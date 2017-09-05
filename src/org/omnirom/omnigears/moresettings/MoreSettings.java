@@ -36,6 +36,7 @@ import com.android.internal.util.omni.PackageUtils;
 import com.android.settings.R;
 import com.android.settings.SettingsActivity;
 import com.android.settings.SettingsPreferenceFragment;
+import org.omnirom.omnilib.preference.TelephonyUtils;
 import com.android.settings.Utils;
 import com.android.internal.logging.MetricsLogger;
 import com.android.internal.logging.nano.MetricsProto.MetricsEvent;
@@ -49,6 +50,7 @@ public class MoreSettings extends SettingsPreferenceFragment implements OnPrefer
     private static final String TAG = "MoreSettings";
     private static final String KEY_SHOW_DASHBOARD_COLUMNS = "show_dashboard_columns";
     private static final String KEY_HIDE_DASHBOARD_SUMMARY = "hide_dashboard_summary";
+    private static final String INCALL_VIB_OPTIONS = "incall_vib_options";
 
     private SharedPreferences mAppPreferences;
 
@@ -61,6 +63,13 @@ public class MoreSettings extends SettingsPreferenceFragment implements OnPrefer
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         addPreferencesFromResource(R.xml.more_settings);
+
+        PreferenceScreen prefScreen = getPreferenceScreen();
+
+        PreferenceCategory incallVibCategory = (PreferenceCategory) findPreference(INCALL_VIB_OPTIONS);
+        if (!TelephonyUtils.isVoiceCapable(getActivity())) {
+            prefScreen.removePreference(incallVibCategory);
+        }
 
         mAppPreferences = getActivity().getSharedPreferences(SettingsActivity.APP_PREFERENCES_NAME,
                 Context.MODE_PRIVATE);
