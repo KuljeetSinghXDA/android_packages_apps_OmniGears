@@ -43,6 +43,19 @@
                 android:title="@string/use_old_mobiletype_title"
                 android:summary="@string/use_old_mobiletype_summary"
                 android:defaultValue="false" />
+
+            <org.omnirom.omnilib.preference.SystemSettingSwitchPreference
+                android:key="network_traffic_state"
+                android:title="@string/network_traffic_state_title"
+                android:summary="@string/network_traffic_state_summary"
+                android:defaultValue="false" />
+
+            <org.omnirom.omnilib.preference.SeekBarPreference
+                android:key="network_traffic_autohide_threshold"
+                android:title="@string/network_traffic_autohide_threshold_title"
+                android:max="10"
+                settings:min="0"
+                settings:unitsRight="@string/kbs" />
         </PreferenceCategory>
 
         <PreferenceCategory

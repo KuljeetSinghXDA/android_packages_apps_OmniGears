@@ -18,6 +18,8 @@
 package org.omnirom.omnigears.interfacesettings;
 
 import android.content.Context;
+import android.os.UserHandle;
+import android.content.ContentResolver;
 import android.content.res.Resources;
 import android.net.TrafficStats;
 import android.os.Bundle;
@@ -40,6 +42,7 @@ import com.android.settings.search.Indexable;
 import org.omnirom.omnilib.preference.AppMultiSelectListPreference;
 import org.omnirom.omnilib.preference.ScrollAppsViewPreference;
 import org.omnirom.omnilib.preference.SeekBarPreference;
+import org.omnirom.omnilib.preference.SystemSettingSwitchPreference;
 
 import java.util.Arrays;
 import java.util.ArrayList;
@@ -58,6 +61,8 @@ public class BarsSettings extends SettingsPreferenceFragment implements
     private AppMultiSelectListPreference mAspectRatioAppsSelect;
     private ScrollAppsViewPreference mAspectRatioApps;
     private SeekBarPreference mQsPanelAlpha;
+    private SeekBarPreference mThreshold;
+    private SystemSettingSwitchPreference mNetMonitor;
 
     @Override
     public int getMetricsCategory() {
@@ -76,6 +81,21 @@ public class BarsSettings extends SettingsPreferenceFragment implements
                 Settings.System.OMNI_QS_PANEL_BG_ALPHA, 255);
         mQsPanelAlpha.setValue((int)(((double) qsPanelAlpha / 255) * 100));
         mQsPanelAlpha.setOnPreferenceChangeListener(this);
+
+        final ContentResolver resolver = getActivity().getContentResolver();
+
+        boolean isNetMonitorEnabled = Settings.System.getIntForUser(resolver,
+                Settings.System.NETWORK_TRAFFIC_STATE, 1, UserHandle.USER_CURRENT) == 1;
+        mNetMonitor = (SystemSettingSwitchPreference) findPreference("network_traffic_state");
+        mNetMonitor.setChecked(isNetMonitorEnabled);
+        mNetMonitor.setOnPreferenceChangeListener(this);
+
+        int value = Settings.System.getIntForUser(resolver,
+                Settings.System.NETWORK_TRAFFIC_AUTOHIDE_THRESHOLD, 1, UserHandle.USER_CURRENT);
+        mThreshold = (SeekBarPreference) findPreference("network_traffic_autohide_threshold");
+        mThreshold.setValue(value);
+        mThreshold.setOnPreferenceChangeListener(this);
+        mThreshold.setEnabled(isNetMonitorEnabled);
 
         final PreferenceCategory aspectRatioCategory =
                 (PreferenceCategory) getPreferenceScreen().findPreference(KEY_ASPECT_RATIO_CATEGORY);
@@ -123,6 +143,20 @@ public class BarsSettings extends SettingsPreferenceFragment implements
             int trueValue = (int) (((double) bgAlpha / 100) * 255);
             Settings.System.putInt(getContentResolver(),
                     Settings.System.OMNI_QS_PANEL_BG_ALPHA, trueValue);
+            return true;
+        } else if (preference == mNetMonitor) {
+            boolean value = (Boolean) newValue;
+            Settings.System.putIntForUser(getActivity().getContentResolver(),
+                    Settings.System.NETWORK_TRAFFIC_STATE, value ? 1 : 0,
+                    UserHandle.USER_CURRENT);
+            mNetMonitor.setChecked(value);
+            mThreshold.setEnabled(value);
+            return true;
+        } else if (preference == mThreshold) {
+            int val = (Integer) newValue;
+            Settings.System.putIntForUser(getContentResolver(),
+                    Settings.System.NETWORK_TRAFFIC_AUTOHIDE_THRESHOLD, val,
+                    UserHandle.USER_CURRENT);
             return true;
         }
         return false;
