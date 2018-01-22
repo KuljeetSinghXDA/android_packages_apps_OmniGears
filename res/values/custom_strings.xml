@@ -872,4 +872,8 @@
     <string name="content_padding">Corner Content Padding</string>
     <string name="corner_fwvals">Use framework values</string>
     <string name="corner_fwvals_summary">Useful if the device actually has rounded corners</string>
+
+    <!-- Show 4G instead of LTE -->
+    <string name="show_4g_title">Show 4G</string>
+    <string name="show_4g_summary">Show 4G instead of LTE signal icon</string>
 </resources>

@@ -802,4 +802,7 @@
   <string name="content_padding">Отступ содержимого от углов</string>
   <string name="corner_fwvals">Использовать системные значения</string>
   <string name="corner_fwvals_summary">Полезно, если устройство имеет закругленные углы</string>
+  <!-- Show 4G instead of LTE -->
+  <string name="show_4g_title">Показывать 4G</string>
+  <string name="show_4g_summary">Показывать значек 4G вместо LTE</string>
 </resources>
