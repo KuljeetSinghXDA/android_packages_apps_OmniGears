@@ -48,6 +48,37 @@
     </PreferenceCategory>
 
     <PreferenceCategory
+        android:title="@string/corners_category" >
+
+        <org.omnirom.omnilib.preference.SecureSettingSwitchPreference
+            android:key="sysui_rounded_fwvals"
+            android:title="@string/corner_fwvals"
+            android:summary="@string/corner_fwvals_summary"
+            android:defaultValue="true"
+            android:disableDependentsState="true" />
+
+        <org.omnirom.omnilib.preference.SeekBarPreference
+            android:key="sysui_rounded_size"
+            android:title="@string/corner_radius"
+            android:max="25"
+            settings:min="0"
+            android:defaultValue="12"
+            settings:unitsRight="@string/unit_dp"
+            android:persistent="false"
+            android:dependency="sysui_rounded_fwvals" />
+
+        <org.omnirom.omnilib.preference.SeekBarPreference
+            android:key="sysui_rounded_content_padding"
+            android:title="@string/content_padding"
+            android:max="10"
+            settings:min="0"
+            settings:unitsRight="@string/unit_dp"
+            android:persistent="false"
+            android:dependency="sysui_rounded_fwvals" />
+
+    </PreferenceCategory>
+
+    <PreferenceCategory
         android:key="category_wallpaper_tint"
         android:title="@string/wallpaper_tint_title">
 

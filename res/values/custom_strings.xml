@@ -261,6 +261,7 @@
     <string name="status_bar_custom_header_shadow_title">Header image shadow</string>
     <string name="status_bar_custom_header_shadow_summary">For better visibility on bright images</string>
     <string name="unit_percent">\u0025</string>
+    <string name="unit_dp">dp</string>
     <string name="static_header_provider" translatable="false">static</string>
     <string name="daylight_header_provider" translatable="false">daylight</string>
     <string name="static_header_provider_title">Static image</string>
@@ -864,4 +865,11 @@
 
     <string name="splitscreen_force_systembar_enabled_title">Force show system bars in splitscreen</string>
     <string name="splitscreen_force_systembar_enabled_summary"></string>
+
+    <!-- Round Corner Radius -->
+    <string name="corners_category">Corners</string>
+    <string name="corner_radius">Rounded Corner Radius</string>
+    <string name="content_padding">Corner Content Padding</string>
+    <string name="corner_fwvals">Use framework values</string>
+    <string name="corner_fwvals_summary">Useful if the device actually has rounded corners</string>
 </resources>
