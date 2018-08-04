@@ -189,7 +189,7 @@
   <string name="hardware_keys_disable_title">Выключить аппаратные кнопки</string>
   <string name="hardware_keys_disable_summary">Отключить аппаратные кнопки</string>
   <string name="use_bottom_gesture_title">Использовать жесты для навигации</string>
-  <string name="use_bottom_gesture_summary">Работает только с отключенной панелью навигации</string>
+  <string name="use_bottom_gesture_summary">Лучше работает с отключенной панелью навигации</string>
   <string name="navbar_title">Панель навигации</string>
   <string name="navbar_recents_style_title">Стиль списка запущенных приложений</string>
   <string name="omniswitch_settings">Настройки</string>

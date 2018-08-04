@@ -214,7 +214,7 @@
     <string name="hardware_keys_disable_title">Disable keys</string>
     <string name="hardware_keys_disable_summary">Force disable hardware keys</string>
     <string name="use_bottom_gesture_title">Use swipe up gestures for navigation</string>
-    <string name="use_bottom_gesture_summary">Works only with navigation bar disable</string>
+    <string name="use_bottom_gesture_summary">Works better with navigation bar disable</string>
 
     <string name="navbar_title">Navigation bar</string>
     <string name="navbar_recents_style_title">Recents style</string>
