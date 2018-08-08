@@ -188,8 +188,6 @@
   <string name="navigation_bar_show_summary">Принудительно включить панель навигации</string>
   <string name="hardware_keys_disable_title">Выключить аппаратные кнопки</string>
   <string name="hardware_keys_disable_summary">Отключить аппаратные кнопки</string>
-  <string name="use_bottom_gesture_title">Использовать жесты для навигации</string>
-  <string name="use_bottom_gesture_summary">Лучше работает с отключенной панелью навигации</string>
   <string name="navbar_title">Панель навигации</string>
   <string name="navbar_recents_style_title">Стиль списка запущенных приложений</string>
   <string name="omniswitch_settings">Настройки</string>
@@ -807,4 +805,8 @@
   <!-- Show 4G instead of LTE -->
   <string name="show_4g_title">Показывать 4G</string>
   <string name="show_4g_summary">Показывать значек 4G вместо LTE</string>
+  <string name="gesture_settings_title">Жесты</string>
+  <string name="gesture_settings_info">Доступные жесты:\n\nНазад\n- Проведите вверх по левой или правой стороне \n\nГлавный экран\n- Проведите вверх по центру\n\nНедавние приложения\n- Проведите вверх по центру и удерживайте\n\nДолгое нажатие кнопки "Домой"\n- Коротко проведите по экрану вверх и удерживайте его в центре\n\n\nРаботает лучше при отключенной панели навигации.</string>
+  <string name="use_bottom_gesture_title">Жесты навигации</string>
+  <string name="use_bottom_gesture_summary">Использовать жесты для навигации</string>
 </resources>
