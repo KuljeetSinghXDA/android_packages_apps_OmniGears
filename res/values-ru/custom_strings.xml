@@ -23,7 +23,6 @@
   <string name="profiles_add">Добавить...</string>
   <string name="profile_choose_app">Выбрать приложение</string>
   <string name="reset">Сбросить</string>
-  <string name="kbs">КБ/с</string>
   <!-- Hardware keys -->
   <string name="button_keys_title">Кнопки</string>
   <string name="keys_bindings_title">Действия кнопок</string>
@@ -136,7 +135,7 @@
   <string name="pulse_only_mode">Импульс (по умолчанию)</string>
   <!-- Swap volume buttons when the screen is rotated -->
   <string name="swap_volume_buttons_title">Соответствовать повороту экрана</string>
-  <string name="swap_volume_buttons_summary">Изменияь действия кнопок громкости в зависимости от текущего поворота экрана</string>
+  <string name="swap_volume_buttons_summary">Изменять действия кнопок громкости в зависимости от текущего поворота экрана</string>
   <string name="color_picker_dialog_title">Цвет</string>
   <!-- Battery light settings  -->
   <string name="batterylight_title">Индикация батареи</string>
@@ -177,27 +176,27 @@
   <string name="button_backlight_on_touch_only_title">Подсветка по прикосновению к кнопкам</string>
   <string name="button_backlight_on_touch_only_summary">Подсвечивать кнопки только при касании, а не всё время. Тайм-аут подсветки влияет на эту функцию.</string>
   <string name="button_timeout_title">Время работы подсветки</string>
-  <string name="button_timeout_summary">Отклычено при значении \"0\"</string>
+  <string name="button_timeout_summary">Отключено при значении \"0\"</string>
   <string name="button_link_brightness">В соответствии с экраном</string>
   <string name="button_link_brightness_summary">Использовать яркость экрана</string>
   <string name="button_manual_brightness">Уровень яркости</string>
   <string name="unit_sec">сек.</string>
-  <string name="unit_msec">мсек</string>
+  <string name="unit_msec">мсек.</string>
+  <string name="unit_minutes">мин.</string>
   <string name="button_backlight_enable_title">Включить</string>
   <string name="navigation_bar_show_title">Показывать панель навигации</string>
   <string name="navigation_bar_show_summary">Принудительно включить панель навигации</string>
-  <string name="hardware_keys_disable_title">Выключить аппаратные ключи</string>
-  <string name="hardware_keys_disable_summary">Отключить аппаратные ключи</string>
+  <string name="hardware_keys_disable_title">Выключить аппаратные кнопки</string>
+  <string name="hardware_keys_disable_summary">Отключить аппаратные кнопки</string>
   <string name="navbar_title">Панель навигации</string>
   <string name="navbar_recents_style_title">Стиль списка запущенных приложений</string>
   <string name="omniswitch_settings">Настройки</string>
   <string name="omniswitch_dialog_running_new">В настоящее время OmniSwitch не включен. Пожалуйста включите его в настройках приложения.</string>
   <string name="omniswitch_dialog_unavail">OmniSwitch не установлен.</string>
   <string name="omniswitch_title">Стиль списка запущенных приложений</string>
-  <string name="long_press_recents_action_title">Действие при длительном нажатии на недавнее приложение</string>
+  <string name="long_press_recents_action_title">Долгое нажатие кнопки \"Недавние\"</string>
   <string name="long_press_recents_action_split">Переключить разделение экрана</string>
   <string name="long_press_home_action_title">Долгое нажатие кнопки \"Домой\"</string>
-  <string name="double_press_home_action_title">Действие по двойному нажатию на кнопку \"Домой\"</string>
   <string name="keys_action_recents">Недавние</string>
   <string name="keys_action_assist">Помощь запуска</string>
   <string name="doze_brightness_level_title">Уровень яркости</string>
@@ -317,6 +316,7 @@
   <string name="global_actions_dnd_title">Не беспокоить</string>
   <string name="global_actions_summary">Действия, отображаемые в меню питания</string>
   <string name="global_actions_header">Некоторые действия зависят от настроек устройства и статуса разблокировки загрузчика</string>
+  <string name="global_actions_anim">Внешний вид</string>
   <string name="global_actions_advanced_reboot_summary">Показывать варианты перезагрузки</string>
   <string name="global_actions_advanced_reboot_title">Включить расширенную перезагрузку</string>
   <string name="global_actions_advanced_reboot_summary_new">Показывать больше параметров в меню перезагрузки, если не заблокировано</string>
@@ -335,6 +335,13 @@
   <string name="status_bar_quick_qs_pulldown_off">Выкл</string>
   <string name="status_bar_quick_qs_pulldown_left">Левый</string>
   <string name="status_bar_quick_qs_pulldown_right">Правый</string>
+  <!-- Power menu Animations  -->
+  <string name="power_menu_animation_title">Анимация меню питания</string>
+  <string name="power_menu_animation_summary">Изменить анимацию появления/изчезания меню питания</string>
+  <string name="power_menu_animation_dialog_title">Выберите анимацию меню питания</string>
+  <string name="power_menu_animation_enter">Omni (по умолчанию)</string>
+  <string name="power_menu_animation_bottom">Низ</string>
+  <string name="power_menu_animation_top">Верх</string>
   <!-- Notification light dialogs -->
   <string name="edit_light_settings">Изменить настройки индикатора</string>
   <string name="pulse_speed_title">Длительность и скорость мигания</string>
@@ -392,7 +399,7 @@
   <string name="bars_dt2s_disabled_summary">DT2S ОТКЛЮЧЕН</string>
   <string name="volume_dialog_headers_title">Подписи в панели громкости</string>
   <string name="volume_dialog_headers_summary">Показывать имя потока в панели громкости</string>
-  <string name="lockscreen_hide_media_title">Оключить обложки медиафайлов</string>
+  <string name="lockscreen_hide_media_title">Отключить обложки медиафайлов</string>
   <string name="lockscreen_hide_media_summary">Не показывать данные медиафайлов как обложку экрана блокировки</string>
   <string name="omni_notification_light_settings_summary">Настроить индикатор уведомлений для приложений</string>
   <string name="omni_battery_light_settings_summary">Настроить индикацию батареи</string>
@@ -441,8 +448,6 @@
   <string name="wakelocks_title">Пробуждения</string>
   <string name="wakelocks_summary">Показать статистику пробуждений</string>
   <string name="system_category">Система</string>
-  <string name="custom_wall_browse_title">Обои Omni</string>
-  <string name="custom_wall_browse_summary">Обзор и установка фирменных обоев Omni</string>
   <string name="show_cpu_title">Показать информацию о процессоре</string>
   <string name="show_cpu_summary">Отображать текущее состояние процессора поверх изображения</string>
   <string name="headset_plugged_notification_title">Уведомление о подключении наушников</string>
@@ -461,6 +466,8 @@
   <string name="display_lockscreen_rotation_title">Экран блокировки</string>
   <string name="volume_button_force_media_title">Управление медиа</string>
   <string name="volume_button_force_media_summary">Кнопки громкости регулируют громкость мультимедиа</string>
+  <string name="lockscreen_hide_status_bar_title">Скрыть строку состояния</string>
+  <string name="lockscreen_hide_status_bar_summary">Нажмите для изменения видимости строки состоянии</string>
   <string name="status_bar_logo_title">Логотип Omni в строке состояния</string>
   <string name="status_bar_logo_summary">Немного крутости</string>
   <!-- Doze settings editor -->
@@ -534,7 +541,7 @@
   <string name="show_dashboard_columns_summary">В главной странице настроек</string>
   <string name="hide_dashboard_summary_title">Скрыть содержание</string>
   <string name="hide_dashboard_summary_summary">В главной странице настроек</string>
-  <string name="systemui_theme_style_title">Стиль SystemUI</string>
+  <string name="systemui_theme_style_title">Стиль системы</string>
   <string name="systemui_theme_style_auto">На основе обоев</string>
   <string name="systemui_theme_style_light">Светлый стиль</string>
   <string name="systemui_theme_style_dark">Тёмный стиль</string>
@@ -546,6 +553,22 @@
   <string name="volume_steps_5">5 уровней</string>
   <string name="system_volume_option_title">Громкость системных звуков</string>
   <string name="call_volume_option_title">Громкость при разговоре</string>
+  <string name="double_press_home_action_title">Двойное нажатие кнопки \"Домой\"</string>
+  <string name="omni_theme_select_title">Темы</string>
+  <string name="omni_theme_select_none">Отключено</string>
+  <string name="omni_theme_select_summary">Просмотр и выбор установленных тем</string>
+ <!-- Clear all recents -->
+  <string name="aosp_recents_title">Недавние</string>
+  <string name="show_clear_all_recents_button_title">Кнопка \"Очистить всё\"</string>
+  <string name="show_clear_all_recents_button_summary_on">Показать кнопку \"Очистить всё\"</string>
+  <string name="show_clear_all_recents_button_summary_off">Показать стандартную кнопку \"Очистить всё\"</string>
+  <string name="recents_clear_all_location_title">Расположение кнопки \"Очистить всё\"</string>
+  <string name="recents_clear_all_location_top_right">Вверху справа</string>
+  <string name="recents_clear_all_location_top_left">Вверху слева</string>
+  <string name="recents_clear_all_location_top_center">Вверху по центру</string>
+  <string name="recents_clear_all_location_bottom_right">Внизу справа</string>
+  <string name="recents_clear_all_location_bottom_left">Внизу слева</string>
+  <string name="recents_clear_all_location_bottom_center">Внизу по центру</string>  
   <string name="double_tap_sleep_lockscreen_title">Двойное нажатие на экране блокировки переводит в режим сна</string>
   <string name="double_tap_sleep_lockscreen_summary">Дважды нажмите в любом месте на экране блокировки для перевода устройства в спящий режим</string>
   <string name="screen_off_animation_fade">Простое затухание</string>
@@ -553,9 +576,6 @@
   <string name="screen_off_animation_crt">Эффект старого телевизора</string>
   <string name="screen_off_animation_scale">Уменьшение</string>
   <string name="screen_off_animation_title">Анимация выкл. экрана</string>
-  <string name="omni_theme_select_title">Темы Omni</string>
-  <string name="omni_theme_select_none">Отключена</string>
-  <string name="omni_theme_select_summary">Просмотреть и выбрать установленные темы Omni</string>
   <string name="keys_action_notifications">Уведомления</string>
   <string name="battery_style_text">Только текст</string>
   <string name="battery_style_default">По умолчанию</string>
@@ -596,26 +616,14 @@
   <string name="am_pm_clock_none">Не показывать</string>
   <string name="clock_date_display_none">Не показывать</string>
   <string name="clock_date_display_small">Маленький размер шрифта</string>
-  <string name="clock_date_display_normal">Обычный размер шрифта</string>
-  <string name="clock_date_style_normal">Обычный</string>
-  <string name="clock_date_style_lowercase">Строчные</string>
-  <string name="clock_date_style_uppercase">ПРОПИСНЫЕ</string>
-  <string name="clock_date_format_custom">Пользовательский формат java</string>
-  <string name="status_bar_clock_seconds_title">Показывать секунды</string>
-  <!-- fingerprint authentication vibration -->
-  <string name="fprint_sucess_vib_title">Вибрировать при аутентификации по отпечаткам пальцем</string>
-  <string name="fprint_sucess_vib_summary">Вибрировать при успешной аутентификации по отпечатку пальца</string>
-  <string name="choose_app">Выберите приложение</string>
-  <string name="not_ready_summary">Получение разрешения...</string>
-  <string name="resolve_failed_summary">Ошибка получения разрешения приложения</string>
-  <string name="disabled_entry">Отключено</string>
-  <string name="event_service_settings_title">Мероприятия</string>
-  <string name="category_media_player_title">Медиаплеер</string>
+
+  <string name="event_service_settings_title">События</string>
+  <string name="category_media_player_title">Медиа плеер</string>
   <string name="bt_a2dp_connect_app_list_title">Подключение Bluetooth A2DP</string>
   <string name="headset_connect_app_list_title">Подключение проводной гарнитуры</string>
-  <string name="event_service_enabled_title">Включить службу событий</string>
-  <string name="event_service_running">Служба запущена</string>
-  <string name="event_service_stopped">Служба не запущена</string>
+  <string name="event_service_enabled_title">Включить сервис событий</string>
+  <string name="event_service_running">Сервис запущен</string>
+  <string name="event_service_stopped">Сервис не запущен</string>
   <string name="category_media_player_info_title">Выбор приложения</string>
   <string name="media_player_autostart_title">Отправить событие воспроизведения мультимедиа после запуска</string>
   <string name="media_player_music_active_title">Не запускать событие при воспроизведении</string>
@@ -629,6 +637,81 @@
   <string name="app_chooser_position_title">Позиция диалогового окна выбора приложения</string>
   <string name="wired_events_threshold_title">Время ожидания подключения проводных наушников</string>
   <string name="wired_events_threshold_summary">Игнорировать события гарнитуры, когда они находятся в пределах порога</string>
+  <!-- Expanded desktop -->
+  <string name="expanded_desktop_title">Расширенный рабочий стол</string>
+  <string name="expanded_desktop_summary">Конфигурация приложения в строке состояния и панели навигации</string>
+  <string name="expanded_hide_nothing">Ничего не скрывать</string>
+  <string name="expanded_hide_status">Скрыть строку состояния</string>
+  <string name="expanded_hide_navigation">Скрыть панель навигации</string>
+  <string name="expanded_hide_both">Спрятать обе</string>
+  <string name="expanded_nothing_to_show">Чтобы добавить настраиваемую конфигурацию для каждого приложения для расширенного состояния, установите «Включено для всех» в положение «выключено»</string>
+  <string name="expanded_desktop_state">Расширенные состояние</string>
+  <string name="expanded_enabled_for_all">Включено для всех</string>
+  <string name="expanded_user_configurable">Настраиваемое пользователем</string>
+  <string name="show_only_launcher_menu">Только приложения ланчера</string>
+  <string name="show_all_apps_menu">Все приложения</string>
+  <string name="clock_date_display_normal">Обычный размер шрифта</string>
+  <string name="clock_date_style_normal">Обычный</string>
+  <string name="clock_date_style_lowercase">Строчные</string>
+  <string name="clock_date_style_uppercase">ПРОПИСНЫЕ</string>
+  <string name="clock_date_format_custom">Пользовательский формат java</string>
+  <string name="status_bar_clock_seconds_title">Показывать секунды</string>
+  <!-- fingerprint authentication vibration -->
+  <string name="fprint_sucess_vib_title">Вибрировать при аутентификации по отпечаткам пальцем</string>
+  <string name="fprint_sucess_vib_summary">Вибрировать при успешной аутентификации по отпечатку пальца</string>
+  <string name="choose_app">Выберите приложение</string>
+  <string name="not_ready_summary">Получение разрешения...</string>
+  <string name="resolve_failed_summary">Ошибка получения разрешения приложения</string>
+  <string name="disabled_entry">Отключено</string>
+  <!-- Face Auto Unlock -->
+  <string name="face_auto_unlock_title">Автоматическая разблокировка</string>
+  <string name="face_auto_unlock_summary">Скрыть экран блокировки при разблокировке лицом</string>
+   <!-- Brightness control -->
+  <string name="status_bar_toggle_brightness">Управление яркостью</string>
+  <string name="status_bar_toggle_brightness_summary">Регулировать яркость экрана движением пальца по строке состояния</string>
+  <!-- System default animation -->
+  <string name="system_default_animation_title">Стиль анимации Android P</string>
+  <string name="system_default_animation_summary">Включить анимации \"По умолчанию\" из Android P</string>
+  <!-- Three-fingers-swipe to screenshot -->
+  <string name="three_finger_gesture">Жест тремя пальцами</string>
+  <string name="three_finger_gesture_summary">Провести тремя пальцами, чтобы сделать скриншот</string>
+   <!-- Bottom shortcuts -->
+  <string name="systemui_tuner_lockscreen_bottom_shortcuts_title">Экран блокировки</string>
+  <string name="systemui_tuner_lockscreen_bottom_shortcuts_summary">Настроить экран блокировки</string>
+  <!-- Hide lockscreen status bar, clock, date, alarm -->
+  <string name="lockscreen_item_title">Элементы экрана блокировки</string>
+  <string name="lockscreen_item_summary">Настройка видимости элементов экрана блокировки</string>
+  <string name="hide_lockscreen_clock_title">Скрыть виджет часов</string>
+  <string name="hide_lockscreen_clock_summary">Изменение видимости виджета часов</string>
+  <string name="hide_lockscreen_date_title">Скрыть виджет даты</string>
+  <string name="hide_lockscreen_date_summary">Изменение видимости даты под виджетами часов</string>
+  <string name="hide_lockscreen_alarm_title">Скрыть текст будильника</string>
+  <string name="hide_lockscreen_alarm_summary">Изменение видимости текстового сообщения под виджетами часов</string>
+  <string name="hide_lockscreen_status_bar_title">Скрыть строку состояния</string>
+  <string name="hide_lockscreen_status_bar_summary">Нажмите на строку состояния, чтобы переключить видимость</string>
+  <!-- Smart Pixels -->
+  <string name="smart_pixels_title">Умные пиксели</string>
+  <string name="smart_pixels_summary">Экономить аккумулятор, отключая дополнительные пиксели</string>
+  <string name="smart_pixels_enable_title">Включить умные пиксели</string>
+  <string name="smart_pixels_enable_summary">Отключить пиксели, чтобы уменьшить потребление энергии</string>
+  <string name="smart_pixels_on_power_save_title">Автоматическое включение в режиме энергосбережения</string>
+  <string name="smart_pixels_on_power_save_summary">Включить умные пиксели, когда включена функция экономии заряда батареи</string>
+  <string name="smart_pixels_percent">Процент пикселей для отключения</string>
+  <string name="smart_pixels_shift_title">Защита от выгорания</string>
+  <string name="smart_pixels_shift_summary">Предотвращает выгорание на OLED-устройствах перемещая пиксели</string>
+  <string name="smart_pixels_footer">Умные пиксели — это функция энергосбережения. В зависимости от того, сколько пикселей вы решите отключить, вы сможете получить значительное увеличение времени автономной работы. Для наилучшего опыта использования мы рекомендуем установить количество отключенных пикселей на 75 процентов.</string>
+  <!-- Status bar ticker -->
+  <string name="ticker_mode_title">Бегущая строка</string>
+  <string name="ticker_disabled">Отключено</string>
+  <string name="ticker_enabled">Сообщения бегущей строкой</string>
+  <string name="ticker_media_enabled">Сообщения и музыка бегущей строкой</string>
+  <string name="ticker_animation_mode_title">Стиль анимации бегущей строки</string>
+  <string name="ticker_animation_mode_alpha_fade">Затухание</string>
+  <string name="ticker_animation_mode_scroll">Прокрутка</string>
+
+  <string name="category_network_title">Сеть</string>
+  <string name="disable_wifi_threshold_title">Выключать Wi\u2011Fi автоматически</string>
+  <string name="disable_wifi_threshold_summary">Деактивировать Wi\u2011Fi, если при отключении от сети мы не подключаемся через несколько минут</string>
   <!-- Quick Pulldown-->
   <string name="quick_pulldown_title">Быстрый доступ</string>
   <string name="quick_pulldown_summary">%1$s строки состояния при опускании вниз открывает панель быстрых настроек</string>
@@ -637,38 +720,60 @@
   <string name="quick_pulldown_left">Левый край</string>
   <string name="quick_pulldown_right">Правый край</string>
   <string name="quick_pulldown_always">Всегда</string>
-  <!-- Expanded desktop -->
-  <string name="expanded_desktop_title">Расширенный рабочий стол</string>
-  <string name="expanded_desktop_summary">Конфигурация приложения в строке состояния и панели навигации</string>
-  <string name="expanded_hide_nothing">Ничего не скрывать</string>
-  <string name="expanded_hide_status">Скрыть строку состояния</string>
-  <string name="expanded_hide_navigation">Скрыть панель навигации</string>
-  <string name="expanded_hide_both">Скрыть оба</string>
-  <string name="expanded_nothing_to_show">Для добавление пользовательской конфигурации для каждого приложения для расширенного режима, отключите \"Включено для всех\"</string>
-  <string name="expanded_desktop_state">Расширенное состояние</string>
-  <string name="expanded_enabled_for_all">Включено для всех</string>
-  <string name="expanded_user_configurable">Настраивается пользователем</string>
-  <string name="show_only_launcher_menu">Только для приложений лаунчера</string>
-  <string name="show_all_apps_menu">Все приложения</string>
-  <!-- Brightness control -->
-  <string name="status_bar_toggle_brightness">Управление яркостью</string>
-  <string name="status_bar_toggle_brightness_summary">Регулировать яркость экрана движением пальца по строке состояния</string>
   <!-- Bottom shortcuts -->
-  <string name="systemui_tuner_lockscreen_bottom_shortcuts_title">Нижние ярлыки</string>
-  <string name="systemui_tuner_lockscreen_bottom_shortcuts_summary">Настройка нижних ярлыков</string>
   <string name="long_press_power_torch_title">Длительное нажатие для включения фонарика</string>
   <string name="long_press_power_torch_summary">Включение и выключение фонарика, когда экран выключен</string>
-  <!-- Hide lockscreen status bar, clock, date, alarm -->
-  <string name="lockscreen_item_title">Элементы на заблокированном экране</string>
-  <string name="lockscreen_item_summary">Настройка видимости элементов на экране блокировки</string>
-  <string name="hide_lockscreen_clock_title">Скрыть виджет часов</string>
-  <string name="hide_lockscreen_clock_summary">Изменение видимости виджета часов</string>
-  <string name="hide_lockscreen_date_title">Скрыть виджет даты</string>
-  <string name="hide_lockscreen_date_summary">Изменение видимости даты под виджетом часов</string>
-  <string name="hide_lockscreen_alarm_title">Скрыть текст будильника</string>
-  <string name="hide_lockscreen_alarm_summary">Изменение видимости текста будильника под виджетом часов</string>
-  <string name="hide_lockscreen_status_bar_title">Скрыть строку состояния</string>
-  <string name="hide_lockscreen_status_bar_summary">Нажмите на строку состояния, чтобы переключить видимость</string>
+  
+  <!-- Incall vibrate options -->
+  <string name="incall_vibration_category">Параметры вибрации во время разговора</string>
+  <string name="incall_vibrate_connect_title">Вибрировать при соединении</string>
+  <string name="incall_vibrate_call_wait_title">Вибрировать при ожидании</string>
+  <string name="incall_vibrate_disconnect_title">Вибрировать при отключении</string>
+
+  <string name="captive_portal_mode_title">Отключить доступный портал</string>
+  <string name="captive_portal_mode_summary">Отключить проверку соединения, отключив доступный портал</string>
+
+  <!-- Wallpaper tint -->
+  <string name="wallpaper_tint_title">Оттенок на основе обоев</string> 
+  <string name="wallpaper_tint_power_menu">В меню питания</string>
+  <string name="wallpaper_tint_recents">В недавних приложениях</string>
+  <string name="wallpaper_tint_keyguard">На экране блокировки</string>
+  <string name="wallpaper_tint_notification_shade">В уведомлениях</string>
+  <string name="wallpaper_tint_summary">Применить оттенок к фону на основе обоев рабочего стола</string>
+  <!-- Toast icon -->
+  <string name="toast_icon_title">Иконка приложения в тост-уведомлении</string>
+  <string name="toast_icon_summary">Отображать значок приложения, соответствующий тост-уведомлению</string>
+
+  <!-- captive portal - disable connectivity check -->
+  <string name="captive_portal_ignore_mode_title">Включить портал доступности</string>
+  <string name="captive_portal_ignore_mode_summary">Активировать проверку соединения, включив портал доступности</string>
+
+  <string name="lockscreen_clock_style_title">Стиль часов на экране блокировки</string>
+  <string name="clock_style_digital">Цифровые</string>
+  <string name="clock_style_analog">Аналоговые</string>
+  <string name="clock_style_binary">Бинарные</string>
+
+  <string name="omni_clock_settings_title">Аналоговые часы</string>
+  <string name="omni_clock_settings_summary">Настройки стиля и цвета</string>
+  <string name="omni_clock_24h_mode_title">24-часовой режим</string>
+  <string name="omni_clock_24h_mode_summary"></string>
+  <string name="omni_clock_show_ticks_title">Показать часовые метки</string>
+  <string name="omni_clock_show_ticks_summary"></string>
+  <string name="omni_clock_show_numbers_title">Показать цифры часов</string>
+  <string name="omni_clock_show_numbers_summary"></string>
+  <string name="omni_clock_bg_color_title">Цвет фона</string>
+  <string name="omni_clock_border_color_title">Цвет границы</string>
+  <string name="omni_clock_hour_color_title">Цвет часов</string>
+  <string name="omni_clock_minute_color_title">Цвет минут</string>
+  <string name="omni_clock_text_color_title">Цвет текста</string>
+  <string name="omni_clock_accent_color_title">Цвет акцента</string>
+
+  <string name="lockscreen_digital_clock_two_lines_title">В две линии</string>
+  <string name="lockscreen_digital_clock_two_lines_summary"></string>
+  <string name="lockscreen_digital_clock_bold_hour_title">Жирные цифры часов</string>
+  <string name="lockscreen_digital_clock_bold_hour_summary"></string>
+  <string name="digital_clock_settings_title">Цифровые часы</string>
+  <string name="digital_clock_settings_summary">Настройки стиля</string>
   <string name="hide_lockscreen_indicator_display_title">Скрыть текст статуса внизу</string>
   <string name="hide_lockscreen_indicator_display_summary">Скрыть информацию о зарядке и подсказки</string>
   <string name="hide_lockscreen_icon_title">Скрыть значок экрана блокировки</string>
@@ -685,21 +790,24 @@
   <string name="aspect_ratio_apps_info">Приложения необходимо перезапустить для применения изменений</string>
   <string name="navigation_bar_menu_arrow_keys_title">Показывать стрелки при вводе текста</string>
   <string name="navigation_bar_menu_arrow_keys_summary">Отображать левую и правую кнопки курсора при наборе текста</string>
-  <string name="lockscreen_clock_style_title">Стиль часов экрана блокировки</string>
-  <string name="clock_style_digital">Цифровой стиль</string>
-  <string name="clock_style_analog">Аналоговый стиль</string>
-  <string name="clock_style_binary">Двоичный стиль</string>
-  <string name="omni_clock_settings_title">Аналоговые часы</string>
-  <string name="omni_clock_settings_summary">Настройки стиля и цвета</string>
-  <string name="omni_clock_24h_mode_title">24-часовой формат времени</string>
-  <string name="omni_clock_bg_color_title">Цвет фона</string>
-  <string name="omni_clock_border_color_title">Цвет границы</string>
-  <string name="omni_clock_hour_color_title">Цвет часов</string>
-  <string name="omni_clock_minute_color_title">Цвет минут</string>
-  <string name="omni_clock_text_color_title">Цвет текста</string>
-  <string name="omni_clock_accent_color_title">Цвет акцента</string>
-  <string name="lockscreen_digital_clock_two_lines_title">Стиль двойной линии</string>
-  <string name="lockscreen_digital_clock_bold_hour_title">Жирный шрифт часов</string>
-  <string name="digital_clock_settings_title">Цифровые часы</string>
-  <string name="digital_clock_settings_summary">Настройки стиля</string>
+  <!-- QuickSettings Panel Transparency -->
+  <string name="quick_settings_category">Быстрые настройки</string>
+  <string name="qs_panel_alpha_title">Непрозрачность быстрых настроек</string>
+  <string name="qs_panel_alpha_summary">Настроить непрозрачность фона</string>
+  <string name="splitscreen_force_systembar_enabled_title">Принудительно показывать системные панели при разделении экрана</string>
+  <string name="splitscreen_force_systembar_enabled_summary"></string>
+  <!-- Round Corner Radius -->
+  <string name="corners_category">Углы</string>
+  <string name="corner_radius">Радиус скругления углов</string>
+  <string name="content_padding">Отступ содержимого от углов</string>
+  <string name="corner_fwvals">Использовать системные значения</string>
+  <string name="corner_fwvals_summary">Полезно, если устройство имеет закругленные углы</string>
+  <!-- Show 4G instead of LTE -->
+  <string name="show_4g_title">Показывать 4G</string>
+  <string name="show_4g_summary">Показывать значек 4G вместо LTE</string>
+  <string name="gesture_settings_title">Жесты</string>
+  <string name="gesture_settings_info">Панель навигации должна быть отключена!\n\nДоступные жесты:\n\nНазад\n- Проведите вверх по левой или правой стороне \n\nГлавный экран\n- Проведите вверх по центру\n\nНедавние приложения\n- Проведите вверх по центру и удерживайте\n\nДолгое нажатие кнопки "Домой"\n- Коротко проведите по экрану вверх и удерживайте его в центре\n\n\nРаботает лучше при отключенной панели навигации.</string>
+  <string name="gesture_settings_info_new">Панель навигации должна быть отключена!\n\Доступные жесты:\n\nНазад\n- Проведите вверх по левой или правой стороне \n\nГлавный экран\n- Проведите вверх по центру\n\nНедавние приложения\n- Проведите вверх по центру и удерживайте\n\nДолгое нажатие кнопки "Домой"\n- Коротко проведите по экрану вверх и удерживайте его в центре</string>
+  <string name="use_bottom_gesture_title">Жесты навигации</string>
+  <string name="use_bottom_gesture_summary">Использовать жесты для навигации</string>
 </resources>
