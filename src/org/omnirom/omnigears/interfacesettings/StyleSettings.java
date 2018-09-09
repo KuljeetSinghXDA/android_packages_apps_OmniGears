@@ -48,7 +48,6 @@ import java.util.Map;
 public class StyleSettings extends SettingsPreferenceFragment implements
         Preference.OnPreferenceChangeListener, Indexable {
     private static final String TAG = "StyleSettings";
-    private static final String CUSTOM_WALL_BROWSE = "custom_wall_browse";
 
     private Preference mWallBrowse;
 
@@ -66,9 +65,6 @@ public class StyleSettings extends SettingsPreferenceFragment implements
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         addPreferencesFromResource(R.xml.style_settings);
-
-        mWallBrowse = findPreference(CUSTOM_WALL_BROWSE);
-        mWallBrowse.setEnabled(isBrowseWallsAvailable());
     }
 
     @Override

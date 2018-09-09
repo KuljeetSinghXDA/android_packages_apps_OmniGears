@@ -48,7 +48,7 @@
 
     </PreferenceCategory>
 
-    <PreferenceCategory
+ <!--   <PreferenceCategory
         android:key="button_other"
         android:title="@string/button_other_title" >
 
@@ -59,6 +59,6 @@
             android:entryValues="@array/navbar_recents_style_values"
             android:persistent="false"/>
 
-    </PreferenceCategory>
+    </PreferenceCategory> -->
 
 </PreferenceScreen>
