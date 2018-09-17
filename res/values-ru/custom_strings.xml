@@ -810,4 +810,8 @@
   <string name="gesture_settings_info_new">Панель навигации должна быть отключена!\n\Доступные жесты:\n\nНазад\n- Проведите вверх по левой или правой стороне \n\nГлавный экран\n- Проведите вверх по центру\n\nНедавние приложения\n- Проведите вверх по центру и удерживайте\n\nДолгое нажатие кнопки "Домой"\n- Коротко проведите по экрану вверх и удерживайте его в центре</string>
   <string name="use_bottom_gesture_title">Жесты навигации</string>
   <string name="use_bottom_gesture_summary">Использовать жесты для навигации</string>
+  <!-- StatusBar -->
+  <string name="statusbar_settings_category">Панель статуса</string>
+  <string name="use_old_mobiletype_title">Использовать старый стиль отображения сети</string>
+  <string name="use_old_mobiletype_summary">Объединить значки сигнала и типа сети</string>
 </resources>
