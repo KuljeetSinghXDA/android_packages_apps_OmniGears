@@ -798,4 +798,6 @@
   <string name="network_traffic_state_title">Сетевой трафик</string>
   <string name="network_traffic_state_summary">Показывать сетевую активность в панели статуса</string>
   <string name="network_traffic_autohide_threshold_title">Порог неактивности (KB/s)</string>
+  <string name="recents_tasks_visible_disable_title">Отключить ограничения последних запущенных приложений</string>
+  <string name="recents_tasks_visible_disable_summary">Показать все последние приложения без ограничений по времени или размеру</string>  
 </resources>
