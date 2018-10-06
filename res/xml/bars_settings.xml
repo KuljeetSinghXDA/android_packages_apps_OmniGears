@@ -56,6 +56,12 @@
                 android:max="10"
                 settings:min="0"
                 settings:unitsRight="@string/kbs" />
+
+            <org.omnirom.omnilib.preference.SystemSettingSwitchPreference                
+                android:key="hide_notch"
+                android:title="@string/hide_notch_title"
+                android:summary="@string/hide_notch_summary"
+                android:defaultValue="false" />
         </PreferenceCategory>
 
         <PreferenceCategory
