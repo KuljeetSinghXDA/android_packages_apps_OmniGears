@@ -58,10 +58,12 @@ public class ButtonSettings extends SettingsPreferenceFragment implements OnPref
     private static final String CATEGORY_OTHER = "button_other";
     private static final String CATEGORY_POWER = "button_power";
     private static final String KEYS_SHOW_NAVBAR_KEY = "navigation_bar_show";
+    private static final String KEY_BUTTON_LIGHT = "button_brightness";
     private static final String SYSTEM_PROXI_CHECK_ENABLED = "system_proxi_check_enabled";
 
     private ListPreference mNavbarRecentsStyle;
     private SwitchPreference mEnableNavBar;
+    private Preference mButtonLight;
 
     @Override
     public int getMetricsCategory() {
@@ -76,6 +78,10 @@ public class ButtonSettings extends SettingsPreferenceFragment implements OnPref
 
         final ContentResolver resolver = getContentResolver();
         final PreferenceScreen prefScreen = getPreferenceScreen();
+        final int deviceKeys = getResources().getInteger(
+                com.android.internal.R.integer.config_deviceHardwareKeys);
+        final boolean buttonLights = getResources().getBoolean(
+                com.android.internal.R.bool.config_button_brightness_support);
         final PreferenceCategory keysCategory =
                 (PreferenceCategory) prefScreen.findPreference(CATEGORY_KEYS);
         final PreferenceCategory otherCategory =
@@ -84,6 +90,11 @@ public class ButtonSettings extends SettingsPreferenceFragment implements OnPref
                 (PreferenceCategory) prefScreen.findPreference(CATEGORY_POWER);
 
         mEnableNavBar = (SwitchPreference) prefScreen.findPreference(KEYS_SHOW_NAVBAR_KEY);
+        mButtonLight = prefScreen.findPreference(KEY_BUTTON_LIGHT);
+
+        if (!buttonLights || deviceKeys == 0) {
+            keysCategory.removePreference(mButtonLight);
+        }
 
         boolean showNavBarDefault = DeviceUtils.deviceSupportNavigationBar(getActivity());
         boolean showNavBar = Settings.System.getInt(resolver,
