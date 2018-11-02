@@ -44,26 +44,6 @@
                 android:summary="@string/use_old_mobiletype_summary"
                 android:defaultValue="false" />
 
-            <org.omnirom.omnilib.preference.SystemSettingSwitchPreference
-                android:key="network_traffic_state"
-                android:title="@string/network_traffic_state_title"
-                android:summary="@string/network_traffic_state_summary"
-                android:defaultValue="true" />
-
-            <org.omnirom.omnilib.preference.SystemSettingSwitchPreference
-                android:key="network_traffic_hidearrow"
-                android:title="@string/network_traffic_hidearrow"
-                android:summary="@string/network_traffic_hidearrow_summary"
-                android:dependency="network_traffic_state"
-                android:defaultValue="false" />
-
-            <org.omnirom.omnilib.preference.SeekBarPreference
-                android:key="network_traffic_autohide_threshold"
-                android:title="@string/network_traffic_autohide_threshold_title"
-                android:max="10"
-                settings:min="0"
-                settings:unitsRight="@string/kbs" />
-
             <org.omnirom.omnilib.preference.SystemSettingSwitchPreference                
                 android:key="hide_notch"
                 android:title="@string/hide_notch_title"
