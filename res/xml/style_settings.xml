@@ -43,4 +43,27 @@
                     android:targetClass="org.omnirom.omnistyle.BrowseThemesActivity" />
         </Preference>
     </PreferenceCategory>
+
+    <PreferenceCategory
+        android:key="category_corners"
+        android:title="@string/corners_category" >
+
+        <org.omnirom.omnilib.preference.SeekBarPreference
+            android:key="sysui_rounded_size"
+            android:title="@string/corner_radius"
+            android:max="80"
+            android:min="0"
+            android:defaultValue="0"
+            android:persistent="false" />
+
+        <org.omnirom.omnilib.preference.SeekBarPreference
+            android:key="sysui_rounded_content_padding"
+            android:title="@string/content_padding"
+            android:max="20"
+            android:min="0"
+            android:defaultValue="0"
+            android:persistent="false" />
+
+    </PreferenceCategory>
+
 </PreferenceScreen>

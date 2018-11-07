@@ -22,6 +22,7 @@ import android.content.Context;
 import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.content.pm.ResolveInfo;
+import android.content.res.Resources;
 import android.net.Uri;
 import android.os.Bundle;
 import android.support.v7.preference.ListPreference;
@@ -48,8 +49,11 @@ import java.util.Map;
 public class StyleSettings extends SettingsPreferenceFragment implements
         Preference.OnPreferenceChangeListener, Indexable {
     private static final String TAG = "StyleSettings";
+    private static final String OMNI_SYSUI_ROUNDED_SIZE = "sysui_rounded_size";
+    private static final String OMNI_SYSUI_ROUNDED_CONTENT_PADDING = "sysui_rounded_content_padding";
 
-    private Preference mWallBrowse;
+    private SeekBarPreference mCornerRadius;
+    private SeekBarPreference mContentPadding;
 
     @Override
     public void onResume() {
@@ -65,6 +69,35 @@ public class StyleSettings extends SettingsPreferenceFragment implements
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         addPreferencesFromResource(R.xml.style_settings);
+
+        Resources res = null;
+        Context mContext = getContext();
+
+        try {
+            res = mContext.getPackageManager().getResourcesForApplication("com.android.systemui");
+        } catch (PackageManager.NameNotFoundException e) {
+            e.printStackTrace();
+        }
+
+        float displayDensity = getResources().getDisplayMetrics().density;
+
+        // Rounded Corner Radius
+        int resourceIdRadius = res.getIdentifier("com.android.systemui:dimen/rounded_corner_radius", null, null);
+        mCornerRadius = (SeekBarPreference) findPreference(OMNI_SYSUI_ROUNDED_SIZE);
+        int cornerRadius = Settings.System.getInt(mContext.getContentResolver(), Settings.System.OMNI_SYSUI_ROUNDED_SIZE,
+                (int) (res.getDimension(resourceIdRadius) / displayDensity));
+        mCornerRadius.setValue(cornerRadius / 1);
+        mCornerRadius.setOnPreferenceChangeListener(this);
+
+        // Rounded Content Padding
+        int resourceIdPadding = res.getIdentifier("com.android.systemui:dimen/rounded_corner_content_padding", null, null);
+        mContentPadding = (SeekBarPreference) findPreference(OMNI_SYSUI_ROUNDED_CONTENT_PADDING);
+        int contentPadding = Settings.System.getInt(mContext.getContentResolver(),
+                Settings.System.OMNI_SYSUI_ROUNDED_CONTENT_PADDING,
+                (int) (res.getDimension(resourceIdPadding) / displayDensity));
+        mContentPadding.setValue(contentPadding / 1);
+        mContentPadding.setOnPreferenceChangeListener(this);
+
     }
 
     @Override
@@ -74,14 +107,16 @@ public class StyleSettings extends SettingsPreferenceFragment implements
 
     @Override
     public boolean onPreferenceChange(Preference preference, Object newValue) {
+        if (preference == mCornerRadius) {
+            int value = ((Integer) newValue) * 1;
+            Settings.System.putInt(mContext.getContentResolver(),
+                Settings.System.OMNI_SYSUI_ROUNDED_SIZE, value, UserHandle.USER_CURRENT);
+        } else if (preference == mContentPadding) {
+            int value = ((Integer) newValue) * 1;
+            Settings.System.putInt(mContext.getContentResolver(),
+                Settings.System.OMNI_SYSUI_ROUNDED_CONTENT_PADDING, value, UserHandle.USER_CURRENT);
+        }
         return true;
-    }
-
-    private boolean isBrowseWallsAvailable() {
-        PackageManager pm = getPackageManager();
-        Intent browse = new Intent();
-        browse.setClassName("org.omnirom.omnistyle", "org.omnirom.omnistyle.BrowseWallsActivity");
-        return pm.resolveActivity(browse, 0) != null;
     }
 
     public static final Indexable.SearchIndexProvider SEARCH_INDEX_DATA_PROVIDER =
