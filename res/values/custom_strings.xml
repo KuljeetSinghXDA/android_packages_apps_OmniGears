@@ -830,4 +830,7 @@
     <string name="face_auto_unlock_title">Face auto unlock</string>
     <string name="face_auto_unlock_summary">Dismiss lockscreen after face unlocking</string>
 
+    <!-- Display Manager -->
+    <string name="omni_display_manager">Display colors</string>
+
 </resources>

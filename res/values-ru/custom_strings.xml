@@ -819,5 +819,6 @@
   <string name="recents_tasks_visible_disable_summary">Показать все последние приложения без ограничений по времени или размеру</string>  
   <string name="hide_notch_title">Скрыть выемку</string>
   <string name="hide_notch_summary">Приложения не могут использовать выемку</string>
-
+  <!-- Display Manager -->
+  <string name="omni_display_manager">Цвет дисплея</string>
 </resources>
