@@ -825,4 +825,11 @@
   <string name="hide_notch_summary">Приложения не могут использовать выемку</string>
   <!-- Display Manager -->
   <string name="omni_display_manager">Цвет дисплея</string>
+  <!-- Call notifications -->
+  <string name="call_notifications_cat">Параметры уведомлений о звонках</string>
+  <string name="flashlight_on_call_title">Мигать фонариком при звонке</string>
+  <string name="flashlight_on_call_disabled">Выключено</string>
+  <string name="flashlight_on_call_not_dnd">Мигать фонариком только в режиме звонка</string>
+  <string name="flashlight_on_call_dnd">Мигать фонариком только в режиме не беспокоить</string>
+  <string name="flashlight_on_call_always">Всегда мигать фонариком</string>
 </resources>

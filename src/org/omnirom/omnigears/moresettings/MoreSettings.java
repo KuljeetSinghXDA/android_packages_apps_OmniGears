@@ -18,6 +18,7 @@
 
 package org.omnirom.omnigears.moresettings;
 
+import android.content.ContentResolver;
 import android.content.Context;
 import android.content.SharedPreferences;
 import android.os.Bundle;
@@ -36,12 +37,14 @@ import com.android.internal.util.omni.PackageUtils;
 import com.android.settings.R;
 import com.android.settings.SettingsActivity;
 import com.android.settings.SettingsPreferenceFragment;
-import org.omnirom.omnilib.preference.TelephonyUtils;
 import com.android.settings.Utils;
 import com.android.internal.logging.MetricsLogger;
 import com.android.internal.logging.nano.MetricsProto.MetricsEvent;
 import com.android.settings.search.BaseSearchIndexProvider;
 import com.android.settings.search.Indexable;
+
+import org.omnirom.omnilib.preference.TelephonyUtils;
+import org.omnirom.omnilib.utils.OmniUtils;
 
 import java.util.List;
 import java.util.ArrayList;
@@ -51,8 +54,10 @@ public class MoreSettings extends SettingsPreferenceFragment implements OnPrefer
     private static final String KEY_SHOW_DASHBOARD_COLUMNS = "show_dashboard_columns";
     private static final String KEY_HIDE_DASHBOARD_SUMMARY = "hide_dashboard_summary";
     private static final String INCALL_VIB_OPTIONS = "incall_vib_options";
+    private static final String FLASHLIGHT_ON_CALL = "flashlight_on_call";
 
     private SharedPreferences mAppPreferences;
+    private ListPreference mFlashlightOnCall;
 
     @Override
     public int getMetricsCategory() {
@@ -65,6 +70,18 @@ public class MoreSettings extends SettingsPreferenceFragment implements OnPrefer
         addPreferencesFromResource(R.xml.more_settings);
 
         PreferenceScreen prefScreen = getPreferenceScreen();
+
+        mFlashlightOnCall = (ListPreference) findPreference(FLASHLIGHT_ON_CALL);
+        Preference FlashOnCall = findPreference("flashlight_on_call");
+        if (!OmniUtils.deviceSupportsFlashLight(getActivity())) {
+            prefScreen.removePreference(FlashOnCall);
+        } else {
+        int flashlightValue = Settings.System.getInt(getContentResolver(),
+                Settings.System.FLASHLIGHT_ON_CALL, 0);
+        mFlashlightOnCall.setValue(String.valueOf(flashlightValue));
+        mFlashlightOnCall.setSummary(mFlashlightOnCall.getEntry());
+        mFlashlightOnCall.setOnPreferenceChangeListener(this);
+        }
 
         PreferenceCategory incallVibCategory = (PreferenceCategory) findPreference(INCALL_VIB_OPTIONS);
         if (!TelephonyUtils.isVoiceCapable(getActivity())) {
@@ -99,6 +116,14 @@ public class MoreSettings extends SettingsPreferenceFragment implements OnPrefer
 
     @Override
     public boolean onPreferenceChange(Preference preference, Object newValue) {
+        if (preference == mFlashlightOnCall) {
+            int flashlightValue = Integer.parseInt(((String) newValue).toString());
+            Settings.System.putInt(getContentResolver(),
+                    Settings.System.FLASHLIGHT_ON_CALL, flashlightValue);
+            mFlashlightOnCall.setValue(String.valueOf(flashlightValue));
+            mFlashlightOnCall.setSummary(mFlashlightOnCall.getEntry());
+            return true;
+        }
         return false;
     }
 

@@ -19,6 +19,12 @@
     android:key="more_settings"
     android:title="@string/more_settings_title">
 
+            <ListPreference
+                android:key="flashlight_on_call"
+                android:title="@string/flashlight_on_call_title"
+                android:entries="@array/flashlight_on_call_entries"
+                android:entryValues="@array/flashlight_on_call_values" />
+
         <PreferenceCategory
             android:key="incall_vib_options"
             android:title="@string/incall_vibration_category" >
@@ -56,6 +62,7 @@
                 android:persistent="false" />
 
         </PreferenceCategory>
+
         <PreferenceCategory
             android:key="category_system"
             android:title="@string/system_category">
