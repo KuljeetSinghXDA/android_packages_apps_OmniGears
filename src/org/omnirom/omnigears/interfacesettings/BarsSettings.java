@@ -56,7 +56,6 @@ public class BarsSettings extends SettingsPreferenceFragment implements
     private static final String KEY_ASPECT_RATIO_APPS_LIST_SCROLLER = "aspect_ratio_apps_list_scroller";
     private static final String KEY_QS_PANEL_ALPHA = "qs_panel_alpha";
     private static final String KEY_STATUSBAR_CATEGORY = "statusbar_settings_category";
-    private static final String KEY_HIDE_NOTCH = "hide_notch";
     private static final String NETWORK_TRAFFIC_ROOT = "category_network_traffic";
 
     private ListPreference mQuickPulldown;
@@ -108,15 +107,6 @@ public class BarsSettings extends SettingsPreferenceFragment implements
             }
             mAspectRatioAppsSelect.setValues(valuesList);
             mAspectRatioAppsSelect.setOnPreferenceChangeListener(this);
-        }
-
-        final String displayCutout = getResources().getString(com.android.internal.R.string.config_mainBuiltInDisplayCutout);
-        if(TextUtils.isEmpty(displayCutout)) {
-            final PreferenceCategory statusBarCategory =
-                (PreferenceCategory) prefScreen.findPreference(KEY_STATUSBAR_CATEGORY);
-            final Preference hideNotchPref =
-                (Preference) prefScreen.findPreference(KEY_HIDE_NOTCH);
-            statusBarCategory.removePreference(hideNotchPref);
         }
 
         // TrafficStats will return UNSUPPORTED if the device does not support it.
