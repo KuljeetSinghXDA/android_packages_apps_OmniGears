@@ -730,8 +730,8 @@
   <string name="incall_vibrate_call_wait_title">Вибрировать при ожидании</string>
   <string name="incall_vibrate_disconnect_title">Вибрировать при отключении</string>
 
-  <string name="captive_portal_mode_title">Отключить доступный портал</string>
-  <string name="captive_portal_mode_summary">Отключить проверку соединения, отключив доступный портал</string>
+  <string name="captive_portal_mode_title">Проверка сетевого подключения</string>
+  <string name="captive_portal_mode_summary">Включить проверку соединения, активировав доступный портал</string>
 
   <!-- Wallpaper tint -->
   <string name="wallpaper_tint_title">Оттенок на основе обоев</string> 
@@ -810,6 +810,10 @@
   <string name="gesture_settings_info_new">Панель навигации должна быть отключена!\n\Доступные жесты:\n\nНазад\n- Проведите вверх по левой или правой стороне \n\nГлавный экран\n- Проведите вверх по центру\n\nНедавние приложения\n- Проведите вверх по центру и удерживайте\n\nДолгое нажатие кнопки "Домой"\n- Коротко проведите по экрану вверх и удерживайте его в центре</string>
   <string name="use_bottom_gesture_title">Жесты навигации</string>
   <string name="use_bottom_gesture_summary">Использовать жесты для навигации</string>
+  <string name="gesture_swipe_length_title">Высота срабатывания жеста</string>
+  <string name="gesture_swipe_length_summary">Расстояние снизу до срабатывания жеста</string>
+  <string name="gesture_action_timeout_title">Тайм-аут срабатывания жеста</string>
+  <string name="gesture_action_timeout_summary">Тайм-аут до начала действия жеста</string>
   <!-- StatusBar -->
   <string name="statusbar_settings_category">Панель статуса</string>
   <string name="use_old_mobiletype_title">Использовать старый стиль отображения сети</string>
