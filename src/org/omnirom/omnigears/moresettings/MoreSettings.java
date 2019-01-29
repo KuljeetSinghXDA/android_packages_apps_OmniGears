@@ -43,7 +43,6 @@ import com.android.internal.logging.nano.MetricsProto.MetricsEvent;
 import com.android.settings.search.BaseSearchIndexProvider;
 import com.android.settings.search.Indexable;
 
-import org.omnirom.omnilib.preference.TelephonyUtils;
 import org.omnirom.omnilib.utils.OmniUtils;
 
 import java.util.List;
@@ -53,7 +52,6 @@ public class MoreSettings extends SettingsPreferenceFragment implements OnPrefer
     private static final String TAG = "MoreSettings";
     private static final String KEY_SHOW_DASHBOARD_COLUMNS = "show_dashboard_columns";
     private static final String KEY_HIDE_DASHBOARD_SUMMARY = "hide_dashboard_summary";
-    private static final String INCALL_VIB_OPTIONS = "incall_vib_options";
     private static final String FLASHLIGHT_ON_CALL = "flashlight_on_call";
 
     private SharedPreferences mAppPreferences;
@@ -81,11 +79,6 @@ public class MoreSettings extends SettingsPreferenceFragment implements OnPrefer
         mFlashlightOnCall.setValue(String.valueOf(flashlightValue));
         mFlashlightOnCall.setSummary(mFlashlightOnCall.getEntry());
         mFlashlightOnCall.setOnPreferenceChangeListener(this);
-        }
-
-        PreferenceCategory incallVibCategory = (PreferenceCategory) findPreference(INCALL_VIB_OPTIONS);
-        if (!TelephonyUtils.isVoiceCapable(getActivity())) {
-            prefScreen.removePreference(incallVibCategory);
         }
 
         mAppPreferences = getActivity().getSharedPreferences(SettingsActivity.APP_PREFERENCES_NAME,

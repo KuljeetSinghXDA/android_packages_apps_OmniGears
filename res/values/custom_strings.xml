@@ -822,12 +822,6 @@
     <string name="use_old_mobiletype_title">Use old mobile type style</string>
     <string name="use_old_mobiletype_summary">Merge signal and type icons</string>
 
-    <!-- Incall vibrate options -->
-    <string name="incall_vibration_category">In-call vibration options</string>
-    <string name="incall_vibrate_connect_title">Vibrate on connect</string>
-    <string name="incall_vibrate_call_wait_title">Vibrate on call waiting</string>
-    <string name="incall_vibrate_disconnect_title">Vibrate on disconnect</string>
-
     <string name="recents_tasks_visible_disable_title">Disable recent app limits</string>
     <string name="recents_tasks_visible_disable_summary">Show all recent apps without time or size limitations</string>
 
@@ -852,4 +846,8 @@
     <string name="flashlight_on_call_dnd">Blink flashlight only in DND mode</string>
     <string name="flashlight_on_call_always">Always blink flashlight</string>
 
+    <!-- Statusbar net monitor -->
+    <string name="network_traffic_state_title">Network traffic</string>
+    <string name="network_traffic_state_summary">Show net activity in statusbar</string>
+    <string name="network_traffic_autohide_threshold_title">Net activity autohide threshold (KB/s)</string>
 </resources>
