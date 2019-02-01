@@ -724,11 +724,15 @@
   <string name="long_press_power_torch_title">Длительное нажатие для включения фонарика</string>
   <string name="long_press_power_torch_summary">Включение и выключение фонарика, когда экран выключен</string>
   
-  <!-- Incall vibrate options -->
+  <!-- Dialer Setting -->
+  <string name="dialer_settings_title">Звонки</string>
   <string name="incall_vibration_category">Параметры вибрации во время разговора</string>
+  <string name="incall_vibrate_connect_summary">Устройство вибрирует при соединении</string>
   <string name="incall_vibrate_connect_title">Вибрировать при соединении</string>
   <string name="incall_vibrate_call_wait_title">Вибрировать при ожидании</string>
+  <string name="incall_vibrate_call_wait_summary">Устройство вибрирует при ожидании</string>
   <string name="incall_vibrate_disconnect_title">Вибрировать при отключении</string>
+  <string name="incall_vibrate_disconnect_summary">Устройство вибрирует при отключении</string>
 
   <string name="captive_portal_mode_title">Проверка сетевого подключения</string>
   <string name="captive_portal_mode_summary">Включить проверку соединения, активировав доступный портал</string>
