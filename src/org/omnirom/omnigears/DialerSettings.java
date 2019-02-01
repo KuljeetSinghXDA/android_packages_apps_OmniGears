@@ -18,8 +18,14 @@
 
 package org.omnirom.omnigears;
 
+import android.content.ContentResolver;
 import android.content.Context;
 import android.os.Bundle;
+import android.support.v7.preference.ListPreference;
+import android.support.v7.preference.Preference;
+import android.support.v7.preference.PreferenceScreen;
+import android.support.v7.preference.Preference.OnPreferenceChangeListener;
+import android.provider.Settings;
 import android.provider.SearchIndexableResource;
 
 import com.android.settings.R;
@@ -29,11 +35,16 @@ import com.android.internal.logging.nano.MetricsProto.MetricsEvent;
 import com.android.settings.search.BaseSearchIndexProvider;
 import com.android.settings.search.Indexable;
 
+import org.omnirom.omnilib.utils.OmniUtils;
+
 import java.util.List;
 import java.util.ArrayList;
 
-public class DialerSettings extends SettingsPreferenceFragment implements Indexable {
+public class DialerSettings extends SettingsPreferenceFragment implements OnPreferenceChangeListener, Indexable {
     private static final String TAG = "DialerSettings";
+    private static final String FLASHLIGHT_ON_CALL = "flashlight_on_call";
+
+    private ListPreference mFlashlightOnCall;
 
     @Override
     public int getMetricsCategory() {
@@ -45,6 +56,33 @@ public class DialerSettings extends SettingsPreferenceFragment implements Indexa
         super.onCreate(savedInstanceState);
         addPreferencesFromResource(R.xml.dialer_settings);
 
+        PreferenceScreen prefScreen = getPreferenceScreen();
+
+        mFlashlightOnCall = (ListPreference) findPreference(FLASHLIGHT_ON_CALL);
+        Preference FlashOnCall = findPreference("flashlight_on_call");
+        if (!OmniUtils.deviceSupportsFlashLight(getActivity())) {
+            prefScreen.removePreference(FlashOnCall);
+        } else {
+        int flashlightValue = Settings.System.getInt(getContentResolver(),
+                Settings.System.FLASHLIGHT_ON_CALL, 0);
+        mFlashlightOnCall.setValue(String.valueOf(flashlightValue));
+        mFlashlightOnCall.setSummary(mFlashlightOnCall.getEntry());
+        mFlashlightOnCall.setOnPreferenceChangeListener(this);
+        }
+
+    }
+
+    @Override
+    public boolean onPreferenceChange(Preference preference, Object newValue) {
+        if (preference == mFlashlightOnCall) {
+            int flashlightValue = Integer.parseInt(((String) newValue).toString());
+            Settings.System.putInt(getContentResolver(),
+                    Settings.System.FLASHLIGHT_ON_CALL, flashlightValue);
+            mFlashlightOnCall.setValue(String.valueOf(flashlightValue));
+            mFlashlightOnCall.setSummary(mFlashlightOnCall.getEntry());
+            return true;
+        }
+        return false;
     }
 
     public static final Indexable.SearchIndexProvider SEARCH_INDEX_DATA_PROVIDER =
