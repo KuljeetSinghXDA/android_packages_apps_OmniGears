@@ -836,4 +836,7 @@
   <string name="flashlight_on_call_not_dnd">Мигать фонариком только в режиме звонка</string>
   <string name="flashlight_on_call_dnd">Мигать фонариком только в режиме не беспокоить</string>
   <string name="flashlight_on_call_always">Всегда мигать фонариком</string>
+  <!-- Fingerprint -->
+  <string name="fingerprint_settings_title">Отпечаток</string>
+  <string name="fingerprint_category_custom_icon">Пользовательский значок</string>
 </resources>

@@ -860,4 +860,7 @@
     <string name="incall_vibrate_disconnect_title">Vibrate on disconnect</string>
     <string name="incall_vibrate_disconnect_summary">Device vibrate on call disconnect</string>
 
+    <!-- Fingerprint -->
+    <string name="fingerprint_settings_title">Fingerprint</string>
+    <string name="fingerprint_category_custom_icon">Custom icon</string>
 </resources>
