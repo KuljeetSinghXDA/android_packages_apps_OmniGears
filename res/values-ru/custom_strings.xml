@@ -576,12 +576,6 @@
   <string name="screen_off_animation_crt">Эффект старого телевизора</string>
   <string name="screen_off_animation_scale">Уменьшение</string>
   <string name="screen_off_animation_title">Анимация выкл. экрана</string>
-<<<<<<< HEAD
-=======
-  <string name="omni_theme_select_title">Темы Omniverse</string>
-  <string name="omni_theme_select_none">Отключена</string>
-  <string name="omni_theme_select_summary">Просмотреть и выбрать установленные темы Omniverse</string>
->>>>>>> 65f20a6... Change name to omniverse
   <string name="keys_action_notifications">Уведомления</string>
   <string name="battery_style_text">Только текст</string>
   <string name="battery_style_default">По умолчанию</string>
