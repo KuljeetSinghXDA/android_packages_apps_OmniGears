@@ -25,5 +25,5 @@
     <color name="omni_clock_ambient_color">#ffffff</color>
     <color name="omni_clock_ambient_bg_color">#000000</color>
     <color name="omni_clock_text_color">#ffffff</color>
-    <color name="omni_logo_color">#5e97f6</color>
+    <color name="omni_logo_color">#00E676</color>
 </resources>
