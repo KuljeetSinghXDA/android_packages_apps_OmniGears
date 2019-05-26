@@ -65,7 +65,7 @@
     <string name="button_volume_wake_summary">Pressing a volume button will wake the device</string>
     <string name="button_volume_wake_enabled_summary">Volume button wake is ON</string>
     <string name="button_volume_wake_disabled_summary">Volume button wake is OFF</string>
-    <string name="volume_panel_on_left_title">Volume Panel on Left</string>
+    <string name="volume_panel_on_left_title">Volume panel on Left</string>
     <string name="volume_panel_on_left_summary">Show volume panel on the left side of the screen</string>
     <string name="volume_keys_control_ring_tone_title">Control ring volume</string>
     <string name="volume_keys_control_ring_tone_summary">Keys control media slider by default. Enable to switch to ring tone slider.</string>
@@ -309,7 +309,7 @@
     <string name="app_ops_settings_summary">Block app permissions</string>
 
     <!-- Wakelock blocker --> 
-    <string name="wakelock_blocker_title">Wakelock Blocker</string> 
+    <string name="wakelock_blocker_title">Wakelock blocker</string> 
     <string name="wakelock_blocker_summary">Block system wakelocks</string> 
     <string name="wakelock_blocker_save">Save</string> 
     <string name="wakelock_list_header">Available wakelocks</string> 
@@ -816,7 +816,7 @@
     <string name="event_service_settings_title">Events</string>
 
     <!-- QuickSettings Panel Transparency -->
-    <string name="quick_settings_category">Quick Settings</string>
+    <string name="quick_settings_category">Quick settings</string>
     <string name="qs_panel_alpha_title">Quick Settings opacity</string>
     <string name="qs_panel_alpha_summary">Configure opacity of background</string>
 
@@ -847,7 +847,7 @@
     <string name="custom_bars_settings_title">Bars</string>
 
     <!-- StatusBar -->
-    <string name="statusbar_settings_category">Status Bar</string>
+    <string name="statusbar_settings_category">Status bar</string>
     <string name="use_old_mobiletype_title">Use old mobile type style</string>
     <string name="use_old_mobiletype_summary">Merge signal and type icons</string>
 
@@ -864,12 +864,12 @@
     <string name="corners_category">Corners</string>
     <string name="corner_fwvals">Use framework values</string>
     <string name="corner_fwvals_summary">Useful if the device actually has rounded corners</string>
-    <string name="corner_radius">Rounded Corner Radius</string>
-    <string name="content_padding">Corner Content Padding</string>
+    <string name="corner_radius">Rounded corner radius</string>
+    <string name="content_padding">Corner content padding</string>
 
     <!-- Call notifications -->
     <string name="call_notifications_cat">Call Notification Options</string>
-    <string name="flashlight_on_call_title">Blink Flashlight on call</string>
+    <string name="flashlight_on_call_title">Blink flashlight on call</string>
     <string name="flashlight_on_call_disabled">Disabled</string>
     <string name="flashlight_on_call_not_dnd">Blink flashlight only in ringer mode</string>
     <string name="flashlight_on_call_dnd">Blink flashlight only in DND mode</string>
@@ -889,13 +889,13 @@
     <string name="three_finger_gesture_summary">Swipe three fingers to take screenshot</string>
 
     <!-- Aggressive battery -->
-    <string name="aggressive_battery_title">Aggressive Battery</string>
+    <string name="aggressive_battery_title">Aggressive battery</string>
     <string name="aggressive_battery_warning_text">These are power saving features. They may interfere with services intended to run at idle, like navigation apps. You can whitelist these apps from being affected in the app battery settings.</string>
-    <string name="aggressive_idle_title">Aggressive Idle</string>
+    <string name="aggressive_idle_title">Aggressive idle</string>
     <string name="aggressive_idle_summary">Enter device idle more frequently and wake up less</string>
-    <string name="aggressive_standby_title">Aggressive Standby</string>
+    <string name="aggressive_standby_title">Aggressive standby</string>
     <string name="aggressive_standby_summary">Restrict apps from running the background</string>
     <string name="aggressive_battery_saver_title">Auto-enable on battery saver </string>
-    <string name="aggressive_battery_saver_summary">Enable Aggressive Battery automatically when using battery saver</string>
+    <string name="aggressive_battery_saver_summary">Enable Aggressive battery automatically when using battery saver</string>
 
 </resources>
