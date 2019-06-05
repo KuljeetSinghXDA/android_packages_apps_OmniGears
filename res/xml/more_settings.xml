@@ -93,6 +93,12 @@
                 android:summary="@string/alarm_blocker_summary" />
 
             <org.omnirom.omnilib.preference.GlobalSettingSwitchPreference
+                android:key="allow_signature_fake"
+                android:title="@string/allow_signature_fake"
+                android:summary="@string/allow_signature_fake_summary"
+                android:defaultValue="false" />
+
+            <org.omnirom.omnilib.preference.GlobalSettingSwitchPreference
                 android:key="recents_tasks_visible_disable"
                 android:title="@string/recents_tasks_visible_disable_title"
                 android:summary="@string/recents_tasks_visible_disable_summary"
